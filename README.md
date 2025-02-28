@@ -24,3 +24,16 @@ cd mon-anniversaire
 yarn add -D @tauri-apps/cli@latest
 yarn tauri dev
 ```
+
+bundle
+
+```sh
+yarn tauri android init
+yarn tauri android build --apk
+```
+
+target
+
+```sh
+rustc --print target-list
+```
