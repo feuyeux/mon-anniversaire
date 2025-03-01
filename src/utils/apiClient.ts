@@ -5,6 +5,15 @@ export async function getAnniversaries(): Promise<Anniversary[]> {
   return await invoke('get_anniversaries');
 }
 
+export async function loadAnniversaries(): Promise<Anniversary[]> {
+  try {
+    return await getAnniversaries();
+  } catch (error) {
+    console.error('Error loading anniversaries:', error);
+    return [];
+  }
+}
+
 export async function createAnniversary(name: string, date: string): Promise<boolean> {
   try {
     await invoke('save_anniversary', { name, date });
@@ -24,6 +33,16 @@ export async function deleteAnniversary(id: number): Promise<boolean> {
     return true;
   } catch (error) {
     console.error('apiClient: Error deleting anniversary:', error);
+    return false;
+  }
+}
+
+export async function updateAnniversary(id: number, name: string, date: string): Promise<boolean> {
+  try {
+    await invoke('update_anniversary', { id, name, date });
+    return true;
+  } catch (error) {
+    console.error('Error updating anniversary:', error);
     return false;
   }
 }

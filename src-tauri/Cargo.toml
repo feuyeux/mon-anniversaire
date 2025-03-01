@@ -21,3 +21,10 @@ chrono = { version = "0.4", features = ["serde"] }
 
 [features]
 custom-protocol = ["tauri/custom-protocol"]
+
+[profile.dev]
+# 开发模式优化级别提高
+opt-level = 1
+# 仅优化关键依赖
+[profile.dev.package."*"]
+opt-level = 1

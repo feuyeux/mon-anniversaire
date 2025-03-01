@@ -25,15 +25,15 @@ yarn add -D @tauri-apps/cli@latest
 yarn tauri dev
 ```
 
-bundle
+## bundle
 
 ```sh
+# rustup target add aarch64-linux-android armv7-linux-androideabi i686-linux-android x86_64-linux-android
 yarn tauri android init
-yarn tauri android build --apk
 ```
 
-target
-
 ```sh
-rustc --print target-list
+# src-tauri/gen/android/gradle/wrapper/gradle-wrapper.properties
+# distributionUrl=https\://mirrors.cloud.tencent.com/gradle/gradle-8.9-bin.zip
+yarn tauri android build --apk
 ```
