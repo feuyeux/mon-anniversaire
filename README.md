@@ -5,6 +5,12 @@
 ## setup
 
 ```sh
+RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup \
+RUSTUP_UPDATE_ROOT=https://mirrors.tuna.tsinghua.edu.cn/rustup/rustup \
+curl -sSf https://sh.rustup.rs | sh
+```
+
+```sh
 cargo create-tauri-app -t vue-ts mon-anniversaire
 ```
 
@@ -24,11 +30,14 @@ mon-anniversaire
 ```sh
 cd mon-anniversaire
 # npm install --global yarn
+# yarn config set registry https://registry.npmmirror.com/
 yarn add -D @tauri-apps/cli@latest
 yarn tauri dev
 ```
 
 <img src="images/Screenshot 2025-03-02 185927.png" alt="windows" style="width:550px" />
+
+<img src="images/Screenshot 2025-03-02 23.50.09.png" alt="macos" style="width:550px" />
 
 ## android
 
