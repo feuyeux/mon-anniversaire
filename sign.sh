@@ -1,0 +1,1 @@
+./apksigner sign --ks D:\coding\mon-anniversaire\my-release-key.keystore --out signed.apk D:\coding\mon-anniversaire\src-tauri\gen\android\app\build\outputs\apk\universal\release\app-universal-release-unsigned.apk
