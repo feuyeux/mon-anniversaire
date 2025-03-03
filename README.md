@@ -11,7 +11,7 @@ curl -sSf https://sh.rustup.rs | sh
 ```
 
 ```sh
-cargo create-tauri-app -t vue-ts mon-anniversaire
+cargo create-tauri-app -m yarn -t vue-ts mon-anniversaire
 ```
 
 prompt
