@@ -32,6 +32,7 @@ cd mon-anniversaire
 # npm install --global yarn
 # yarn config set registry https://registry.npmmirror.com/
 yarn add -D @tauri-apps/cli@latest
+yarn run tauri add os
 yarn tauri dev
 ```
 
